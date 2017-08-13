@@ -129,6 +129,11 @@ class CameraRoll {
     return this.saveToCameraRoll(tag, 'photo');
   }
 
+  static deletePhotos(photos: Array<string>) {
+    /** TODO error handling && check if they really do start with asset-library */
+    return RCTCameraRollManager.deletePhotos(photos);
+  }
+
   /**
    * Saves the photo or video to the camera roll / gallery.
    *
